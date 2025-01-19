@@ -1,0 +1,29 @@
+# Python bytecode files
+*.py[cod]
+__pycache__/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+*.egg-info/
+*.egg
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Environnement local
+*.log
+*.pot
+*.mo
