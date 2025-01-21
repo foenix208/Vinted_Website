@@ -9,10 +9,8 @@ def scrapping():
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
     }
-
     # URL de la page à récupérer
     url = "https://www.vinted.fr/"
-
     # Créer une session pour gérer les cookies
     session = requests.Session()
 
@@ -26,7 +24,7 @@ def scrapping():
     headers['Cookie'] = cookie_header
 
     # URL de la seconde requête
-    url2 = "https://www.vinted.fr/api/v2/catalog/items?page=1&per_page=5&time=1736905822&search_text=nike&catalog_ids=&size_ids=&brand_ids=&status_ids=&color_ids=&material_ids="
+    url2 = "https://www.vinted.fr/api/v2/catalog/items?page=5&per_page=5&time=1736905822&search_text=nike&catalog_ids=&size_ids=&brand_ids=&status_ids=&color_ids=&material_ids="
 
     # Faire la deuxième requête en utilisant les cookies dans les en-têtes
     response_with_cookies = session.get(url2, headers=headers)
@@ -35,5 +33,5 @@ def scrapping():
     if response_with_cookies.status_code == 200:
 
         data = response_with_cookies.json()  # Affiche la réponse en JSON si disponible
-        
-    return (data["items"][0]["title"],data["items"][0]["photo"]["full_size_url"])
+    
+    return data["items"]

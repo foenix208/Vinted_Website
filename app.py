@@ -4,19 +4,16 @@ from flask import request
 from flask import jsonify
 
 import random
-
 from src.scraping import scrapping
 
 
 app = Flask(__name__)
 
-
-@app.route('/')
+@app.route('/',)
 def index():
     if request.is_json:
-        #print(scrapping())
-        #return jsonify({"second":random.randint(0,10)}) 
-        return jsonify(scrapping())
+        print("requests")
+        return jsonify(scrapping())        
     
     return render_template('index.html')
 

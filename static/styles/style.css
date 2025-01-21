@@ -1,7 +1,7 @@
 *{
     --bg-dark : #212529;
     --bg-dark-sonbre : #1a1d20;
-    --bg-ligth-subt : #434a52;
+    --bg-ligth-subt : #525b66;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -24,6 +24,7 @@ nav{
     align-items: center;
     
 }
+
 .main{
     width: 70%;
     position: relative;
@@ -41,9 +42,11 @@ nav{
     border-radius: 30px;
 
 }
+
 form>*{
     padding: 10px 10px;
 }
+
 p{
     color: var(--bg-ligth-subt);
 }
@@ -93,6 +96,13 @@ input{
     background-color: var(--bg-ligth-subt);
 }
 
+.img-card>img{
+    height: 350px;
+    width: 220px;
+    border-radius: 20px;
+
+}
+
 .info{
     color: white;
     position: relative;
@@ -102,6 +112,7 @@ input{
 .info>*{
     padding: 10px 0px;
 }
+
 .dealer{
     display: flex;
     flex-direction: row;
@@ -112,16 +123,28 @@ input{
     color: white;
     padding-left: 10px;
 }
+
 span{
     font-size: 1.5vh;
     font-weight: 100;
     color: var(--bg-ligth-subt);
 }
+
 .dealer-icon{
     height: 50px;
     width: 50px;
     border-radius: 50%;
     background-color: var(--bg-ligth-subt);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dealer-icon>img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 a{
