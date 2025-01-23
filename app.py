@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route('/',)
 def index():
     if request.is_json:
-        print("requests")
+        # print("requests")
         return jsonify(scrapping())        
     
     return render_template('index.html')
